@@ -78,10 +78,9 @@ class CartController extends Controller
 
         $nodiscount=false;
         foreach($discounts as $itm){
-            dump(in_array($itm->product_id, $product_ids));
             if (in_array($itm->product_id, $product_ids))
             {
-                
+
             }
             else
             {
@@ -92,6 +91,10 @@ class CartController extends Controller
 
 
         if(!$nodiscount){
+            //კალათაში ფასდაკლებულების რაოდენობის გაგება
+            
+
+        // ფასდაკლებული ფასის ცვლადი
             $discount_price= 55;
         }else{
             $discount_price=0;
